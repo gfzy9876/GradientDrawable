@@ -2,7 +2,7 @@
 
 ### android没有提供渐变边框的实现，所以通过自定义的方式实现了GradientBorderDrawable
 ### 效果如下，上方是GradientBorderDrawable，下方是通过drawable.xml设置的边框：
-![preview1](previews/preview1.gif)
+![preview1](previews/preview1.png)
 目前支持动态修改圆角`corner`和边框宽度`border_width`
 
 ### xml设置边框代码如下：
@@ -51,10 +51,10 @@ GradientBorderBuilder()
 * `ANGLE_LEFT_TOP_BOTTOM_RIGHT`： 从左上到右下渐变
 * `ANGLE_LEFT_BOTTOM_RIGHT_TOP`： 从左下到右上渐变
 <center>
-	<img src="previews/left_right.jpg" style="height:200px"/>
-	<img src="previews/top_bottom.jpg" style="height:200px"/>
-	<img src="previews/left_top_right_bottom.jpg" style="height:200px"/>
-	<img src="previews/left_bottom_right_top.jpg" style="height:200px"/>
+	<img src="previews/left_right.png" style="height:200px"/>
+	<img src="previews/top_bottom.png" style="height:200px"/>
+	<img src="previews/left_top_right_bottom.png" style="height:200px"/>
+	<img src="previews/left_bottom_right_top.png" style="height:200px"/>
 </center>
 
 ##Extra!
