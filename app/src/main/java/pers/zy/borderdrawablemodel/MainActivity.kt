@@ -1,16 +1,12 @@
 package pers.zy.borderdrawablemodel
 
 import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.SeekBar
 import kotlinx.android.synthetic.main.activity_main.*
 import pers.zy.borderlib.drawable.GradientBorderBuilder
 import pers.zy.borderlib.drawable.GradientBorderDrawable
-import pers.zy.borderlib.utils.dp
 import pers.zy.borderlib.utils.dpF
 
 class MainActivity : AppCompatActivity() {
