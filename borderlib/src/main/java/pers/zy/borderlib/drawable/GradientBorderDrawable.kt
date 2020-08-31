@@ -11,29 +11,24 @@ import pers.zy.borderlib.utils.dpF
  * author zy
  * Have a nice day :)
  **/
-class GradientBorderDrawable(private var borderColors: IntArray = intArrayOf(DEFAULT_COLOR, DEFAULT_COLOR),
-                             private var bgColors: IntArray = intArrayOf(DEFAULT_COLOR, DEFAULT_COLOR),
+class GradientBorderDrawable(private var borderColors: IntArray = DEFAULT_COLORS,
+                             private var bgColors: IntArray = DEFAULT_COLORS,
                              private var borderWidth: Float = DEFAULT_BORDER_WIDTH,
                              private var corner: Float = DEFAULT_CORNER,
                              private val borderAngle: Int = ANGLE_LEFT_RIGHT,
                              private var bgAngle: Int = ANGLE_LEFT_RIGHT) : Drawable() {
 
     companion object {
-        val DEFAULT_BORDER_WIDTH = 5f.dpF
-        val DEFAULT_CORNER = 10f.dpF
         const val DEFAULT_COLOR = Color.TRANSPARENT
+        @JvmField val DEFAULT_COLORS = intArrayOf(DEFAULT_COLOR, DEFAULT_COLOR)
+        @JvmField val DEFAULT_BORDER_WIDTH = 5f.dpF
+        @JvmField val DEFAULT_CORNER = 10f.dpF
 
         const val ANGLE_LEFT_RIGHT = 1
         const val ANGLE_TOP_BOTTOM = 2
         const val ANGLE_LEFT_TOP_BOTTOM_RIGHT = 3
         const val ANGLE_LEFT_BOTTOM_RIGHT_TOP = 4
     }
-
-    constructor(borderStartColor: Int, borderEndColor: Int, bgStartColor: Int, bgEndColor: Int, borderWidth: Float, corner: Float, borderAngle: Int, bgAngle: Int)
-            : this(intArrayOf(borderStartColor, borderEndColor), intArrayOf(bgStartColor, bgEndColor), borderWidth, corner, borderAngle, bgAngle)
-
-    constructor(borderStartColor: Int, borderEndColor: Int, bgStartColor: Int, bgEndColor: Int, borderWidth: Float, corner: Float)
-            : this(intArrayOf(borderStartColor, borderEndColor), intArrayOf(bgStartColor, bgEndColor), borderWidth, corner)
 
     constructor(borderColor: Int, bgColor: Int, borderWidth: Float, corner: Float, borderAngle: Int, bgAngle: Int)
             : this(intArrayOf(borderColor, borderColor), intArrayOf(bgColor, bgColor), borderWidth, corner, borderAngle, bgAngle)

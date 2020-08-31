@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:padding="2dp">
+            android:padding="4dp">
 
             <TextView
                 android:id="@+id/tv_test"
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="2dp"
+            android:padding="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -53,9 +53,8 @@
 
                 <TextView
                     android:id="@+id/tv_corner"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="corner: "/>
 
@@ -74,9 +73,8 @@
 
                 <TextView
                     android:id="@+id/tv_border_width"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="border width: "/>
 
