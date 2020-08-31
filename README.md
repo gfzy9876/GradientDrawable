@@ -51,10 +51,7 @@ GradientBorderBuilder()
 * `ANGLE_LEFT_TOP_BOTTOM_RIGHT`： 从左上到右下渐变
 * `ANGLE_LEFT_BOTTOM_RIGHT_TOP`： 从左下到右上渐变
 <center>
-<img src="previews/left_right.png" width="200"/>
-<img src="previews/top_bottom.png" width="200"/>
-<img src="previews/left_top_right_bottom.png" width="200"/>
-<img src="previews/left_bottom_right_top.png" width="200"/>
+<img src="previews/left_right.png" width="200"/><img src="previews/top_bottom.png" width="200"/><img src="previews/left_top_right_bottom.png" width="200"/><img src="previews/left_bottom_right_top.png" width="200"/>
 </center>
 
 ##Extra!
