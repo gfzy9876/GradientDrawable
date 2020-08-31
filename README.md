@@ -50,9 +50,12 @@ GradientBorderBuilder()
 * `ANGLE_TOP_BOTTOM`： 从上到下渐变
 * `ANGLE_LEFT_TOP_BOTTOM_RIGHT`： 从左上到右下渐变
 * `ANGLE_LEFT_BOTTOM_RIGHT_TOP`： 从左下到右上渐变
-<center>
-<img src="previews/left_right.png" width="200"/><img src="previews/top_bottom.png" width="200"/><img src="previews/left_top_right_bottom.png" width="200"/><img src="previews/left_bottom_right_top.png" width="200"/>
-</center>
+<div align="center">
+<img src="previews/left_right.png" width="200"/>
+<img src="previews/top_bottom.png" width="200"/>
+<img src="previews/left_top_right_bottom.png" width="200"/>
+<img src="previews/left_bottom_right_top.png" width="200"/>
+</div>
 
 ##Extra!
 如有需要扩充的需求，大家可以提在issue上，让类库功能变得更加完善。
