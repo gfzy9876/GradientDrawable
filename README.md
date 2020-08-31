@@ -1,6 +1,7 @@
 # 渐变边框GradientBorderDrawable
 
-### android没有提供渐变边框的实现，所以通过自定义的方式实现了GradientBorderDrawable [![](https://jitpack.io/v/gfzy9876/GradientBorderDrawable.svg)](https://jitpack.io/#gfzy9876/GradientBorderDrawable)
+[![](https://jitpack.io/v/gfzy9876/GradientBorderDrawable.svg)](https://jitpack.io/#gfzy9876/GradientBorderDrawable)
+### android没有提供渐变边框的实现，所以通过自定义的方式实现了GradientBorderDrawable 
 ### 效果如下，上方是GradientBorderDrawable，下方是通过drawable.xml设置的边框：
 ![preview1](previews/preview1.png)
 目前支持动态修改圆角`corner`和边框宽度`border_width`
