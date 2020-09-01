@@ -17,6 +17,12 @@
 ```
 
 ## 使用
+
+首先在Application初始化：
+```kotlin
+GradientBorderInit.init(Context)
+```
+
 ### kotlin使用
 
 ```kotlin
