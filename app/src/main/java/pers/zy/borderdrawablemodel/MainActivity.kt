@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 //            bgAngle = GradientBorderDrawable.ANGLE_LEFT_BOTTOM_RIGHT_TOP // 背景色多色值情况下，选择渐变方向
 //        )
         GradientBorderBuilder()
-            .setBorderColors(intArrayOf(Color.GREEN, Color.RED)) // 边框色，支持多色
-            .setBgColors(intArrayOf(Color.TRANSPARENT, Color.TRANSPARENT)) //背景色，支持多色
+            .setBorderColors(intArrayOf(resources.getColor(R.color.colorAccent), resources.getColor(R.color.colorAccent))) // 边框色，支持多色
+            .setBgColors(intArrayOf(resources.getColor(R.color.black50), resources.getColor(R.color.black50))) //背景色，支持多色
             .setBorderWidth(5f.dpF) //边框宽度 单位px
             .setCorner(0.5f.dpF) //圆角 单位px
             .setBorderAngle(GradientBorderDrawable.ANGLE_LEFT_BOTTOM_RIGHT_TOP) //边框多色值情况下，选择渐变方向
