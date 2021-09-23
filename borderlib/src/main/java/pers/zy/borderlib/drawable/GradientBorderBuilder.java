@@ -10,7 +10,14 @@ public class GradientBorderBuilder {
     private int[] borderColors = GradientBorderDrawable.DEFAULT_COLORS;
     private int[] bgColors = GradientBorderDrawable.DEFAULT_COLORS;
     private float borderWidth = GradientBorderDrawable.DEFAULT_BORDER_WIDTH;
-    private float corner = GradientBorderDrawable.DEFAULT_COLOR;
+    private float[] radii = new float[] {GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS,
+            GradientBorderDrawable.DEFAULT_RADIUS};
     private int borderAngle = GradientBorderDrawable.ANGLE_LEFT_RIGHT;
     private int bgAngle = GradientBorderDrawable.ANGLE_LEFT_RIGHT;
 
@@ -22,7 +29,8 @@ public class GradientBorderBuilder {
     }
 
     public GradientBorderBuilder setBorderColor(int borderColor) {
-        this.borderColors = new int[]{borderColor, borderColor};
+        this.borderColors = new int[]{borderColor,
+                borderColor};
         return this;
     }
 
@@ -41,8 +49,18 @@ public class GradientBorderBuilder {
         return this;
     }
 
-    public GradientBorderBuilder setCorner(float corner) {
-        this.corner = corner;
+    public GradientBorderBuilder setRadius(float radius) {
+        this.radii = new float[] {radius, radius, radius, radius, radius, radius, radius, radius};
+        return this;
+    }
+
+    public GradientBorderBuilder setRadii(float[] radii) {
+        this.radii = radii;
+        return this;
+    }
+
+    public GradientBorderBuilder setRadiusWithRadiusType(float radius, GradientBorderDrawable.RadiusType radiusType) {
+        this.radii = GradientBorderDrawable.createRadiiByType(radius, radiusType);
         return this;
     }
 
@@ -61,7 +79,7 @@ public class GradientBorderBuilder {
                 borderColors,
                 bgColors,
                 borderWidth,
-                corner,
+                radii,
                 borderAngle,
                 bgAngle
         );

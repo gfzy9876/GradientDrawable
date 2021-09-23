@@ -10,8 +10,13 @@ import pers.zy.borderlib.utils.GradientBorderInit
  **/
 class App : Application() {
 
+    companion object {
+        lateinit var INSTANCE: App
+    }
+
     override fun onCreate() {
         super.onCreate()
+        INSTANCE = this
         GradientBorderInit.init(this)
     }
 

@@ -1,91 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tv_test"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="abcdefghijklnmopqrstuvwxyz"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"/>
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:padding="4dp">
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
 
             <TextView
-                android:id="@+id/tv_test"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:text="abcdefghijklnmopqrstuvwxyz"
-                android:textSize="15sp"
-                android:gravity="center"/>
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="设置radius：" />
 
             <TextView
-                android:id="@+id/tv_native"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="5dp"
-                android:text="abcdefghijklnmopqrstuvwxyz"
-                android:textSize="15sp"
-                android:gravity="center"
-                android:background="@drawable/test_bg"/>
+                android:id="@+id/tv_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="20 dp"/>
 
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/radius_seek"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:orientation="vertical">
+            android:layout_height="40dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="设置border：" />
 
-                <TextView
-                    android:id="@+id/tv_corner"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="corner: "/>
-
-                <androidx.appcompat.widget.AppCompatSeekBar
-                    android:id="@+id/corner_seek"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_border_width"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:text="border width: "/>
-
-                <androidx.appcompat.widget.AppCompatSeekBar
-                    android:id="@+id/border_width"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_border_width"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="5 dp"/>
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/border_width"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_radius_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radius_type_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所有角"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_lt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_lb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_rt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左上角和左下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右上角和右下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左上角和右上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左下角和右下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_lt_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左上角和右下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_lb_rt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左下角和右上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_e_lt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="除了左上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_e_lb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="除了左下角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_e_rt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="除了右上角"/>
+
+            <RadioButton
+                android:id="@+id/radius_type_e_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="除了右下角"
+                android:layout_marginBottom="20dp"/>
+        </RadioGroup>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

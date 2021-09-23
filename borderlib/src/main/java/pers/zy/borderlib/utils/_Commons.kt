@@ -8,7 +8,7 @@ import android.util.TypedValue
  * Have a nice day :)
  **/
 
-val Float.dpF: Float
+internal val Float.dpF: Float
     get() {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, GradientBorderInit.context.resources.displayMetrics)
     }

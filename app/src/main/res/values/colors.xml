@@ -5,4 +5,10 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="black50">#80000000</color>
+
+    <color name="border_left_color">#AB225C2F</color>
+    <color name="border_right_color">#ABFF0000</color>
+
+    <color name="inner_left_color">#AB1B1A1A</color>
+    <color name="inner_right_color">#ABCDCD03</color>
 </resources>
