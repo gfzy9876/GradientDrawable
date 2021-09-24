@@ -1,7 +1,7 @@
 # 渐变边框GradientBorderDrawable
 
-[![](https://jitpack.io/v/gfzy9876/GradientBorderDrawable.svg)](https://jitpack.io/#gfzy9876/GradientBorderDrawable)
-### android没有提供渐变边框的实现，所以通过自定义的方式实现了GradientBorderDrawable 
+
+### android没有提供渐变边框的实现，所以通过自定义的方式实现了GradientBorderDrawable
 ### 效果如下，上方是GradientBorderDrawable，下方是通过drawable.xml设置的边框：
 ![preview1](previews/preview1.png)
 ![preview1](previews/preview2.png)
@@ -12,8 +12,30 @@
 * 支持`指定某几个角`实现圆角
 
 ## 使用
+添加依赖：
+```groovy
+// 在项目根目录build.gradle添加
+allprojects {
+  repositories {
+    ...
+      maven { url 'https://jitpack.io' }
+  }
+}
+```
 
-首先在Application初始化：
+```groovy
+// 在module build.gradle添加依赖
+dependencies {
+  implementation 'com.github.gfzy9876:GradientDrawable:latest-version'
+}
+```
+
+latest-version: [![](https://jitpack.io/v/gfzy9876/GradientBorderDrawable.svg)](https://jitpack.io/#gfzy9876/GradientBorderDrawable)
+
+
+
+在Application初始化：
+
 ```kotlin
 GradientBorderInit.init(Context)
 ```
@@ -63,7 +85,7 @@ enum class RadiusType {
 ```
 
 <div align="center">
-<img src="previews/init2.jpg" width="100"/>
+<img src="previews/init2.jpg" width="200"/>
 </div>
 
 
@@ -83,7 +105,7 @@ GradientBorderDrawable(
 )
 ```
 <div align="center">
-<img src="previews/init3.jpg" width="100"/>
+<img src="previews/init3.jpg" width="200"/>
 </div>
 
 
